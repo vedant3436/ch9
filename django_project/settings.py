@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
 ]
 
+
+#if it was "name.CustomUser", password reset, logout etc would be accessed as "name/password_reset"
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 MIDDLEWARE = [
@@ -135,3 +137,5 @@ LOGOUT_REDIRECT_URL = "home"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
